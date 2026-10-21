@@ -1,0 +1,16 @@
+APK DE SALERO SIN INSTALAR NADA (se construye gratis en la nube con GitHub)
+
+1) Crea una cuenta gratis en github.com y un repositorio nuevo (por ejemplo "salero").
+2) Sube TODO el contenido de esta carpeta al repositorio, incluida la carpeta oculta ".github"
+   (si tu sistema oculta ".github" y no se sube: en GitHub pulsa "Add file > Create new file",
+   escribe como nombre  .github/workflows/apk.yml  y pega el contenido de ese archivo).
+   Rama principal: "main".
+3) Ve a la pestaña "Actions" > "Construir APK" > "Run workflow". Tarda unos 5-8 minutos.
+4) Cuando termine, entra a esa ejecución y descarga "salero-apk" (viene en un zip con app-debug.apk).
+5) Pasa el APK al teléfono Android, ábrelo y permite "instalar apps de origen desconocido".
+
+NOTAS
+ - Es un APK de depuración: sirve para instalar y jugar, no para subir a Google Play.
+ - Se abre en horizontal. El progreso se guarda en el teléfono.
+ - Para quitar las monedas infinitas, en www/index.html cambia  const TEST=true;  por  false  y vuelve a ejecutar el paso 3.
+ - Alternativa más rápida: pwabuilder.com con tu juego publicado en una dirección https.
